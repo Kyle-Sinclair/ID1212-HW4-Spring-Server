@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{resources/fragments/layout}">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<main layout:fragment="content">
+
+
+        <section>
+            <h1>Account</h1>
+            <p class="info">Conversion Details</p>
+            <p class="form" th:object="${exchangeValueForm}">
+                From Currency: <span th:text="*{fromCurrency}">Missing</span>,
+                To Currency: <span th:text="*{toCurrency}">Missing</span>,
+                Exchange Rate: <span th:text="*{rate}">Missing</span>,
+                Result: <span th:text="*{result}">Missing</span>
+            </p>
+        </section>
+
+</main>
+</body>
+</html>
+<!--
+
+<div class="form-group col-md-8">
+    <label  class="col-form-label">Category </label>
+    <select  id="category" name="category" th:field="*{category.id}" >
+    </select>
+</div>-->
